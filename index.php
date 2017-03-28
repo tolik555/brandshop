@@ -26,6 +26,13 @@
 <div id="content">
 
     <?php
+    
+    function vardump($var) {
+      echo '<pre>';
+      var_dump($var);
+      echo '</pre>';
+    }
+    
     $id = 1;
     $name = 'IPhone';
     $desc = 'Здесь будет описание IPhone';
@@ -74,7 +81,17 @@
         ]
     ];
     
-    var_dump($goods[1]['name']);
+    var_dump($goods);
+    
+    foreach($goods as $key=>$good){
+        echo 'Ключ масива:'.$key.'<br>';
+        echo $good['id'].'<br>';
+        echo $good['name'].'<br>';
+        echo $good['desc'].'<br>';
+        echo $good['img'].'<br>';
+        echo $good['price'].'<br>';
+        echo '<hr>';
+    }
     
     ?>
 
