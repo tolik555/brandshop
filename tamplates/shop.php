@@ -2,19 +2,23 @@
     Каталог товаров
 </h1>
 
-<div class="shopUnit">
-    <img src="http://placehold.it/308x231" />
+<div>
+    <?php foreach($goods as $key=>$good): ?>
+    <div class="shopUnit">
+        <img src="<? echo $good['img']; ?>" />
 
-    <div class="shopUnitName">
-        Название продукта
-    </div>
-    <div class="shopUnitShortDesc">
-        Здесь будет немного текста описывающего продукт. Здесь будет немного текста описывающего продукт. Здесь будет немного текста описывающего продукт.
-    </div>
-    <div class="shopUnitPrice">
-        Цена: 0000 $
-    </div>
-    <a href="#" class="shopUnitMore">
+        <div class="shopUnitName">
+            <? echo $good['name']; ?>
+        </div>
+        <div class="shopUnitShortDesc">
+            <? echo $good['desc']; ?>
+        </div>
+        <div class="shopUnitPrice">
+            Цена: <? echo $good['price']; ?>
+        </div>
+        <a href="/?page=product&id=<? echo $key; ?>" class="shopUnitMore">
         Подробнее
     </a>
+    </div>
+    <?php endforeach; ?>
 </div>

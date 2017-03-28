@@ -61,29 +61,29 @@
 //    var_dump($product_index['name']);
     ?><br>
                 <?
-//    $goods = [
-//        [
-//            'id'=> 1,
-//            'name'=> 'IPhone',
-//            'desc'=> 'Здесь будет описание IPhone',
-//            'img'=> '/images/goods/iphone.jpg',
-//            'price'=> '2000 $'
-//        ],
-//        [
-//            'id'=> 2,
-//            'name'=> 'HTC',
-//            'desc'=> 'Здесь будет описание HTC',
-//            'img'=> '/images/goods/htc.jpg',
-//            'price'=> '1000 $'
-//        ],
-//        [
-//            'id'=> 3,
-//            'name'=> 'Samsung',
-//            'desc'=> 'Здесь будет описание Samsung',
-//            'img'=> '/images/goods/samsung.jpg',
-//            'price'=> '400 $'
-//        ]
-//    ];
+    $goods = [
+        [
+            'id'=> 1,
+            'name'=> 'IPhone',
+            'desc'=> 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eos atque expedita et. Unde vel reprehenderit consequuntur repellat, culpa nobis, vero illum rem, explicabo autem, harum. Cupiditate atque, libero unde?',
+            'img'=> '/images/goods/iphone.jpg',
+            'price'=> '2000 $'
+        ],
+        [
+            'id'=> 2,
+            'name'=> 'HTC',
+            'desc'=> 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eos atque expedita et. Unde vel reprehenderit consequuntur repellat, culpa nobis, vero illum rem, explicabo autem, harum. Cupiditate atque, libero unde?',
+            'img'=> '/images/goods/htc.jpg',
+            'price'=> '1000 $'
+        ],
+        [
+            'id'=> 3,
+            'name'=> 'Samsung',
+            'desc'=> 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eos atque expedita et. Unde vel reprehenderit consequuntur repellat, culpa nobis, vero illum rem, explicabo autem, harum. Cupiditate atque, libero unde?',
+            'img'=> '/images/goods/samsung.jpg',
+            'price'=> '400 $'
+        ]
+    ];
 //    
 //    var_dump($goods);
 //    
@@ -103,34 +103,18 @@
     } elseif($page=='shop'){
         require('tamplates/shop.php');
     } elseif($page == 'product') {
-        require('tamplates/openedProduct.php');
+        if(!isset($_GET['id'])|| $_GET['id']==""){
+             //do some thing
+            echo 'нет id';
+        } else {
+            $id = $_GET['id'];
+            $product = $goods[$id];
+            require('tamplates/openedProduct.php');
+        }
     }
     
     ?>
-
-                    <!--
-    <div style="width: 1100px; margin: 0 auto">
-        <hr>
-        <h2>
-            Это будет отдельная страница с открытым магзином
-        </h2>
-
-        <div style="width: 1100px; margin: 0 auto">
-            <h1>
-                Каталог товаров
-            </h1>
-        </div>
-
-        <div style="margin-bottom: 20px; float: left;">
-            <hr>
-            <h2>
-                Это будет отдельная страница с открытым товаром
-            </h2>
-            </div>
-        </div>
-
-
-    </div>-->
+    
     </div>
 
     <footer>
