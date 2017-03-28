@@ -49,6 +49,32 @@
         'price'=>'2000 $'
     ];
     var_dump($product_index['name']);
+    ?><br><?
+    $goods = [
+        [
+            'id'=> 1,
+            'name'=> 'IPhone',
+            'desc'=> 'Здесь будет описание IPhone',
+            'img'=> '/images/goods/iphone.jpg',
+            'price'=> '2000 $'
+        ],
+        [
+            'id'=> 2,
+            'name'=> 'HTC',
+            'desc'=> 'Здесь будет описание HTC',
+            'img'=> '/images/goods/htc.jpg',
+            'price'=> '1000 $'
+        ],
+        [
+            'id'=> 3,
+            'name'=> 'Samsung',
+            'desc'=> 'Здесь будет описание Samsung',
+            'img'=> '/images/goods/samsung.jpg',
+            'price'=> '400 $'
+        ]
+    ];
+    
+    var_dump($goods[1]['name']);
     
     ?>
 
