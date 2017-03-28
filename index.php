@@ -26,14 +26,30 @@
 <div id="content">
 
     <?php
-        // эти два слеша это комментарий в языке php,
-        // то что написано после них игнорируется интерпретатором
-        // в комментариях обычно пишутся пояснения относительно кода
-
-        $a = 5;
-        $b = 3;
-        $c = $a + $b == 8;
-        var_dump($c);
+    $id = 1;
+    $name = 'IPhone';
+    $desc = 'Здесь будет описание IPhone';
+    $img = '/images/goods/iphone.jpg';
+    $price = '2000 $';
+    
+    echo $id . '<br>';
+    echo $name . '<br>';
+    echo $desc . '<br>';
+    echo $img . '<br>';
+    echo $price . '<br>';
+    
+    $product = [1, 'IPhone', 'Здесь будет описание IPhone', '/images/goods/iphone.jpg', '2000 $'];
+    var_dump($product[1]);
+    ?><br><?
+    $product_index = [
+        'id'=>1,
+        'name'=>'IPhone',
+        'desc'=>'Здесь будет описание IPhone',
+        'img'=>'/images/goods/iphone.jpg',
+        'price'=>'2000 $'
+    ];
+    var_dump($product_index['name']);
+    
     ?>
 
     <!--<div id="promo">
